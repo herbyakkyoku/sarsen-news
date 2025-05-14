@@ -2,7 +2,7 @@
 export const dynamic = 'force-dynamic';
 
 import { Suspense } from 'react';
-import Home from './_components/Home';
+import Home from '../_components/Home';
 
 export default function Page() {
   return (
