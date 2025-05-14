@@ -1,9 +1,32 @@
 // src/app/layout.js
 import './globals.css';
 
+// src/app/layout.js
+
 export const metadata = {
   title: 'サーセン速報',
-  description: 'YouTuberの謝罪動画をいち早くチェック！',
+  description: 'YouTuberの謝罪動画をいち早くお届け！その謝罪は本音か、それともエンタメか。',
+  openGraph: {
+    title: 'サーセン速報',
+    description: 'YouTuberの謝罪動画をいち早くお届け！その謝罪は本音か、それともエンタメか。',
+    url: 'https://sarsen-news-dev.vercel.app',
+    siteName: 'サーセン速報',
+    images: [
+      {
+        url: '/ogp.png', // 後ほど画像を追加
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'ja_JP',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'サーセン速報',
+    description: 'YouTuberの謝罪動画をいち早くお届け！',
+    images: ['/ogp.png'],
+  },
 };
 
 export default function RootLayout({ children }) {
