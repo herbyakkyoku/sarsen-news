@@ -1,3 +1,4 @@
+// src/app/layout.js
 import './globals.css';
 
 export const metadata = {
@@ -30,15 +31,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ja">
       <head>
-        {/* 👇ここがファビコン設定の決定版 */}
+        {/* ✅ PNG形式のファビコンに変更！ */}
         <link rel="icon" type="image/png" href="/favicon.png" />
 
-        {/* PWA/SEO 追加設定 */}
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" sizes="180x180" href="/icon-512.png" />
-        <meta name="theme-color" content="#000000" />
 
-        {/* SNSカード画像用 明示設定（上の metadata にもあるが念押し） */}
+        <meta name="theme-color" content="#000000" />
         <meta property="og:image" content="/ogp.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
