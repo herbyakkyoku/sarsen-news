@@ -24,18 +24,24 @@ export const metadata = {
     description: 'YouTuberの謝罪動画をいち早くお届け！',
     images: ['/ogp.png'],
   },
-  icons: {
-    icon: '/favicon.ico', // ← ここが favicon 設定！
-    apple: '/icon-512.png',
-  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
       <head>
-        {/* 追加のタグは不要。metadata に書いた内容が反映される */}
+        {/* 👇ここがファビコン設定の決定版 */}
+        <link rel="icon" type="image/png" href="/favicon.png" />
+
+        {/* PWA/SEO 追加設定 */}
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icon-512.png" />
         <meta name="theme-color" content="#000000" />
+
+        {/* SNSカード画像用 明示設定（上の metadata にもあるが念押し） */}
+        <meta property="og:image" content="/ogp.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </head>
       <body>{children}</body>
     </html>
